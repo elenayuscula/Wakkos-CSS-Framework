@@ -1,0 +1,147 @@
+{
+  "name": "elenayuscula/Wakkos-CSS-Framework",
+  "version": "0.1.4",
+  "libraries": {
+    "xv": "^1.1.25"
+  },
+  "title": "Wakkos CSS Framework",
+  "branch": "",
+  "style": {
+    "name": "Default",
+    "componentSet": {
+      "nav": "nav/BasicNav",
+      "header": "header/BannerHeader",
+      "article": "article/BasicArticle",
+      "footer": "footer/BasicFooter"
+    },
+    "fontFamily": "-apple-system, BlinkMacSystemFont, sans-serif",
+    "fontWeight": 400,
+    "bold": 600,
+    "lineHeight": 1.5,
+    "typeScale": [
+      72,
+      48,
+      24,
+      20,
+      16,
+      14,
+      12
+    ],
+    "monospace": "Menlo, monospace",
+    "heading": {
+      "fontFamily": null,
+      "fontStyle": null,
+      "fontWeight": 600,
+      "lineHeight": 1.25,
+      "textTransform": null,
+      "letterSpacing": null
+    },
+    "h0": {},
+    "h1": {},
+    "h2": {},
+    "h3": {},
+    "h4": {},
+    "h5": {},
+    "h6": {},
+    "alternativeText": {},
+    "space": [
+      0,
+      8,
+      16,
+      32,
+      48,
+      64,
+      96
+    ],
+    "layout": {
+      "maxWidth": 1024,
+      "centered": false
+    },
+    "colors": {
+      "text": "#111",
+      "background": "#fff",
+      "primary": "#08e",
+      "secondary": "#059",
+      "highlight": "#e08",
+      "border": "#ddd",
+      "muted": "#eee"
+    },
+    "border": {
+      "width": 1,
+      "radius": 2
+    },
+    "link": {},
+    "button": {
+      "hover": {
+        "boxShadow": "inset 0 0 0 999px rgba(0, 0, 0, .125)"
+      }
+    },
+    "input": {},
+    "body": {
+      "margin": 0
+    },
+    "breakpoints": {
+      "xs": "@media screen and (max-width:40em)",
+      "sm": "@media screen and (min-width:40em)",
+      "md": "@media screen and (min-width:52em)",
+      "lg": "@media screen and (min-width:64em)"
+    }
+  },
+  "content": [
+    {
+      "component": "nav",
+      "links": [
+        {
+          "href": "http://twitter.com/wakkos",
+          "text": "Home"
+        },
+        {
+          "href": "https://github.com/elenayuscula/Wakkos-CSS-Framework",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://npmjs.com/package/Wakkos-CSS-Framework",
+          "text": "npm"
+        }
+      ]
+    },
+    {
+      "component": "header",
+      "heading": "Wakkos-CSS-Framework",
+      "subhead": "SCSS Framework para agilizar maquetación Frontend.",
+      "children": [
+        {
+          "component": "ui/TweetButton",
+          "text": "Wakkos-CSS-Framework: SCSS Framework para agilizar maquetación Frontend.",
+          "url": "http://twitter.com/wakkos"
+        },
+        {
+          "component": "ui/GithubButton",
+          "user": "elenayuscula",
+          "repo": "Wakkos-CSS-Framework"
+        }
+      ],
+      "text": "v1.0.0"
+    },
+    {
+      "component": "article",
+      "metadata": {
+        "source": "github.readme"
+      },
+      "html": "<h1>Wakkos SASS framework</h1>\n<h3>Configuraci&#xF3;n:</h3>\n<h4>settings.scss</h4>\n<p>Configura primeramente el archivo <code>lib/settings.scss</code>.</p>\n<p>Pasa a configurar las variables y diferentes opciones de la atm&#xF3;sfera de dise&#xF1;o,\ndonde podremos configurar colores, fuentes, tama&#xF1;os, etc...</p>\n<h3>Breakpoints</h3>\n<p>Los breakpoints los he colocado en EM en vez de pixels para que el dise&#xF1;o no se\nvea afectado por acciones como el ZOOM. Para m&#xE1;s info leer a\n<a href=\"http://css-tricks.com/why-ems/\">Chris Coyer</a> y a <a href=\"http://blog.cloudfour.com/the-ems-have-it-proportional-media-queries-ftw/\">Lyza Gardner</a> con argumentos al respecto.</p>\n<pre><span class=\"hljs-variable\">$breakpoints</span>: (\n\n  <span class=\"hljs-string\">&apos;small&apos;</span>  : <span class=\"hljs-number\">48em</span>,\n  <span class=\"hljs-string\">&apos;medium&apos;</span> : <span class=\"hljs-number\">56.25em</span>,\n  <span class=\"hljs-string\">&apos;large&apos;</span>  : <span class=\"hljs-number\">68.75em</span>,\n\n) !default;</pre><h3>Nomenclatura</h3>\n<p>La convenci&#xF3;n de nombre sigue este patr&#xF3;n:</p>\n<pre>    <span class=\"hljs-selector-class\">.bloque</span>{}\n    <span class=\"hljs-selector-class\">.bloque__elemento</span>{}\n    <span class=\"hljs-selector-class\">.bloque--modificador</span>{}</pre><ul>\n<li>&apos;.bloque&apos; representa el primer nivel de una abstracci&#xF3;n o componente.</li>\n<li>&apos;.bloque__elemento&apos; representa un descendente de &apos;.bloque&apos; que se ayuda de\n&apos;.bloque&apos; como un conjunto.</li>\n<li>&apos;.bloque--modificador&apos; representa un estado diferente de &apos;.bloque&apos;.</li>\n</ul>\n<p>Una <strong>analog&#xED;a</strong> del funcionamiento de las clases BEM ser&#xED;a:</p>\n<pre>    <span class=\"hljs-selector-class\">.persona</span>{}\n    <span class=\"hljs-selector-class\">.persona--mujer</span>{}\n        <span class=\"hljs-selector-class\">.persona__mano</span>{}\n        <span class=\"hljs-selector-class\">.persona__mano--izquierda</span>{}\n        <span class=\"hljs-selector-class\">.persona__mano--derecha</span>{}</pre><p>Para m&#xE1;s info pod&#xE9;is leer mi traducci&#xF3;n de la <a href=\"https://github.com/Wakkos/CSS-Guidelines\">gu&#xED;a de CSS</a> de <a href=\"https://twitter.com/csswizardry\">Harry Roberts</a>\na la cual me he ajustado en su mayor&#xED;a para crear este framework.</p>\n<p>Tambi&#xE9;n tenemos espacio entre secciones para que sea f&#xE1;cil de ubicar al ver el\narchivo compilado <code>style.css</code>.</p>\n<h3>Organizaci&#xF3;n</h3>\n<p>Los archivos de <strong>SCSS</strong> est&#xE1;n todos dentro de la carpeta <code>scss</code> y distribuidos\nde la siguiente manera:</p>\n<pre>--scss\n        style<span class=\"hljs-selector-class\">.scss</span>\n        -abstracciones\n                     _botones<span class=\"hljs-selector-class\">.scss</span>\n                     _fonticon<span class=\"hljs-selector-class\">.scss</span>\n                     _grid<span class=\"hljs-selector-class\">.scss</span>\n                     _paginacion<span class=\"hljs-selector-class\">.scss</span>\n                     _texturas<span class=\"hljs-selector-class\">.scss</span>\n        --base\n                     _contenido<span class=\"hljs-selector-class\">.scss</span>\n                     _reset<span class=\"hljs-selector-class\">.scss</span>\n                     _debug<span class=\"hljs-selector-class\">.scss</span>\n        --elementos\n                     _figure<span class=\"hljs-selector-class\">.scss</span>\n                     _formulario<span class=\"hljs-selector-class\">.scss</span>\n                     _imagenes<span class=\"hljs-selector-class\">.scss</span>\n                     _links<span class=\"hljs-selector-class\">.scss</span>\n                     _reset<span class=\"hljs-selector-class\">.scss</span>\n                     _tipografia<span class=\"hljs-selector-class\">.scss</span>\n                     _tablas<span class=\"hljs-selector-class\">.scss</span>\n        --layout\n                    _navegacion<span class=\"hljs-selector-class\">.scss</span>\n                    _sitio<span class=\"hljs-selector-class\">.scss</span>\n        --lib\n                    _flex<span class=\"hljs-selector-class\">.scss</span>\n                    _mixins<span class=\"hljs-selector-class\">.scss</span>\n                    _placeholders<span class=\"hljs-selector-class\">.scss</span>\n                    _settings.scss</pre><p>El archivo <code>contenido.scss</code> se compila al principio del <code>style.css</code> para dar una\ngu&#xED;a de donde tenemos nuestros elementos y su nombre, gracias a los comentarios\nBEM na b&#xFA;squeda <code>cmd/ctrl + f</code> en nuestro editor que empiece por $NOMBREDESECCION\nnos ayudar&#xE1; mucho a encontrar el contenido.</p>\n<p>A su vez est&#xE1;n todas las secciones separadas unas de las otras para ubicar r&#xE1;pidamente\n cuando echamos un vistazo.</p>\n<p>El archivo <code>_debug.scss</code> lo usamos para tener una\npeque&#xF1;a gu&#xED;a de la sem&#xE1;ntica de tu documento html.</p>\n<h3>Codekit</h3>\n<p>Ir&#xE9; adapt&#xE1;ndolo a Codekit pero sin que afecte a los que no lo usan. De momento si\nusas Codekit, incluyo el archivo <code>config.codekit</code>y todos los <code>.scss</code>son compilados\nen la carpeta <code>css</code>.</p>\n<h3>Gulp</h3>\n<p>Una alternativa a Codekit y que adem&#xE1;s permite su uso en otros sistemas operativos es Gulp.</p>\n<h4>Instalaci&#xF3;n</h4>\n<p>Se necesita tener instalado Nodejs (<a href=\"https://nodejs.org/en/\">https://nodejs.org/en/</a>) y Gulp:\n<code>npm install gulp -g</code></p>\n<p>Una vez instalados los requisitos anteriores se ejecuta:\n<code>npm install</code>\nen el ra&#xED;z del proyecto. Esto instalar&#xE1; todas las dependencias para que Gulp pueda compilar Sass.</p>\n<h4>Actualizar dependencias</h4>\n<p>Las dependencias est&#xE1;n continuamente actualiz&#xE1;ndose, una buen m&#xE9;todo para automatizar esta tarea es utilizar <code>npm-check-updates</code></p>\n<pre>npm install -g npm-check-updates</pre><p>Ahora ejecutamos en el terminal el siguiente comando para actualizar todas las dependencias.</p>\n<pre>ncu</pre><p>El terminal nos informar&#xE1; de las dependencias que se han actualizado.</p>\n<pre>autoprefixer     ^6.0.3  &#x2192;  ^6.1.2\ngulp-minify-css  ^1.2.1  &#x2192;  ^1.2.2</pre><h4>Configuraci&#xF3;n y uso</h4>\n<p>Para configurar gulp pod&#xE9;is entrar a <code>gulpfile.js</code> y modificar el json de configuraci&#xF3;n (primeras l&#xED;neas):</p>\n<pre>config = {\n  <span class=\"hljs-string\">autoprefixer :</span> <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">//Prefijos de navegadores para CSS: compatibilidad con browsers</span>\n  <span class=\"hljs-string\">minify :</span> <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">// Minificado de CSS</span>\n<span class=\"hljs-symbol\">  mergeMediaQueries:</span> <span class=\"hljs-literal\">true</span>, <span class=\"hljs-comment\">// Unimos el interior de las mediaQueries con las misma condici&#xF3;n</span>\n  <span class=\"hljs-string\">paths :</span> {\n    ...\n  }\n}</pre><p><strong>Tarea autoprefixer</strong> (true o false): tras compilar el <code>.scss</code> a&#xF1;ade prefijos de navegadores para mejorar la compatibilidad con estos.\n<strong>Tarea minify</strong> (true o false): tras compilar el <code>.scss</code>, minificamos el css, borrando todos los espacios innecesarios y comentarios.\n<strong>Tarea mergeMediaQueries</strong> (true o false): tras compilar el <code>.scss</code>, unificamos todas las mediaqueries con la misma condici&#xF3;n, lo cual es perfecto para combinar con el mixing <code>respond-to()</code>.</p>\n<p>Nota: todas las tareas se pueden combinar como se desee.</p>\n<p>Para hacer que gulp compile nuestro <code>.scss</code> debemos escribir <code>gulp</code> en consola.</p>\n<h2>Patrones</h2>\n<p>Lo trabajar&#xE9; en otra rama, ya que ahora mismo no provee ninguna ventaja.</p>\n"
+    },
+    {
+      "component": "footer",
+      "links": [
+        {
+          "href": "https://github.com/elenayuscula/Wakkos-CSS-Framework",
+          "text": "GitHub"
+        },
+        {
+          "href": "https://github.com/elenayuscula",
+          "text": "elenayuscula"
+        }
+      ]
+    }
+  ]
+}
